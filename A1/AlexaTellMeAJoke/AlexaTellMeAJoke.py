@@ -1,5 +1,5 @@
 from tkinter import *
-from tkinter import messagebox
+from tkinter import messagebox# Used for error handling
 import random
 import pyttsx3
 import threading
@@ -125,6 +125,7 @@ def quitApp():
 root = Tk()
 root.title("Cirno's Perfect Joke App!")
 root.geometry("1000x1000")
+root.iconphoto(False, ImageTk.PhotoImage(file="AlexaTellMeAJoke/Cirno.png"))
 
 
 root.rowconfigure(0, weight=1)
@@ -171,8 +172,6 @@ punchlineButton = ctk.CTkButton(master=joke_frame, text="Show Punchline", fg_col
 ListenButton =ctk.CTkButton(master=joke_frame, text="Listen", fg_color="#aaaaaa",text_color="black", hover_color="#484848", width=120, height= 30, corner_radius=50,font=('Impact',20), command=speakText).place(x=440, y=225)
 returnButton = ctk.CTkButton(master=joke_frame, text="Return", fg_color="#aaaaaa",text_color="black", hover_color="#484848", width=150, height= 50, corner_radius=50,font=('Impact',20), command=returnToMenu).place(x=430, y=420)
 
-
 showFrame(start_frame)
-
 
 root.mainloop()
