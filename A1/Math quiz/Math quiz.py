@@ -8,12 +8,12 @@ import os
 import customtkinter as ctk
 
 mixer.init()
-correct_sound = mixer.Sound("A1/Math quiz/Correct.mp3")
-wrong_sound = mixer.Sound("A1/Math quiz/Wrong.mp3")
-button_sound = mixer.Sound("A1/Math quiz/Menu.mp3")
+correct_sound = mixer.Sound("Math quiz/Correct.mp3")
+wrong_sound = mixer.Sound("Math quiz/Wrong.mp3")
+button_sound = mixer.Sound("Math quiz/Menu.mp3")
 
 def play_background_music():
-    music_file = "A1/Math quiz/Bgmusic.mp3"  # Replace with your music file path
+    music_file = "Math quiz/Bgmusic.mp3"  # Replace with your music file path
     
     if os.path.exists(music_file):
         mixer.music.load(music_file)
@@ -29,6 +29,7 @@ root = Tk()
 root.configure(bg="#F9EBFF")
 root.title("Neco's Impossible Math Quiz")
 root.geometry('1000x1000')
+root.iconphoto(False, ImageTk.PhotoImage(file="Math Quiz/icon.png"))
 
 score = 0
 current_question = 0
@@ -194,8 +195,8 @@ def display_menu():
 
 # Create Frame 1
 menu = Frame(root,bg="#F9EBFF")
-img = Image.open("A1/Math quiz/neco.png")
-titleImg = Image.open("A1/Math quiz/Title.png")
+img = Image.open("Math quiz/neco.png")
+titleImg = Image.open("Math quiz/Title.png")
 # Resize image to reasonable dimensions (adjust size as needed)
 resized_img = img.resize((300, 400), Image.Resampling.LANCZOS)
 resized_img2 = titleImg.resize((600, 200), Image.Resampling.LANCZOS) # Use LANCZOS for high-quality downsampling
