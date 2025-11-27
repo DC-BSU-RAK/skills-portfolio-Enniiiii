@@ -183,6 +183,11 @@ def startQuiz(difficulty):
 
         # set the submit button to call the current question's checker (overwrite previous command)
         submitButton.configure(command=checkAndProceed)
+         # set the submit button to call the current question's checker (overwrite previous command)
+        submitButton.configure(command=checkAndProceed)
+
+        # Bind Enter key to submit the answer
+        answerEntry.bind("<Return>", lambda event: checkAndProceed())
     nextQuestion()
     
 def closeWIndow():
